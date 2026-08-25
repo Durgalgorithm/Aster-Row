@@ -1,0 +1,6 @@
+{
+  "name": "Aster & Row Support Agent",
+  "description": "Reliable RAG AI customer support agent with order lookup, source citations, policy conflict handling, and human handoff detection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
