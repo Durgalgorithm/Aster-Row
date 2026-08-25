@@ -51,8 +51,6 @@ An end-to-end, highly reliable AI customer support agent for Aster & Row (a life
 The project includes an `.env.example` template without sensitive credentials:
 
 ```env
-# Optional Gemini API Key for LLM synthesis (defaults to offline deterministic synthesis)
-GEMINI_API_KEY=""
 
 # Application Host URL
 APP_URL="https://ais-dev-ykonxqzxnvcb72zrwkaecz-304205435735.asia-east1.run.app"
@@ -68,7 +66,7 @@ APP_URL="https://ais-dev-ykonxqzxnvcb72zrwkaecz-304205435735.asia-east1.run.app"
 | Indexing & Retrieval | Frontmatter-Aware Section Chunking + BM25 & Semantic Heading Hybrid Scoring | Ingests YAML frontmatter (`status`, `category`, `audience`). Actively deprioritizes superseded policies (`02-returns-policy-legacy.md`) and internal scratchpad notes (`14-internal-content-migration-notes.md`) while prioritizing active customer policies. |
 | Tool Execution | Deterministic Python Tool (`backend/agent/order_lookup.py`) | Sanitizes `data/orders.json`, strips sensitive PII (emails, street addresses, notes, risk scores), normalizes order IDs (`ord-1007` -> `ORD-1007`), and suppresses stale delivery dates for cancelled/returned orders. |
 | Multi-Turn Memory | Contextual Session Memory (`backend/agent/core.py`) | Retains referenced order IDs and conversation topics across follow-ups without leaking context into unrelated sessions. |
-| Framework & UI | Express + Vite / React + Tailwind CSS + Python CLI | A fast, responsive single-screen support interface with clear distinctions for **Answers**, **Source Citations**, and **Human Handoff Alerts**. |
+| Framework & UI | Express + Vite / React + Tailwind CSS + Python CLI | A fast, responsive single-screen support interface with clear distinctions for Answers, Source Citations, and Human Handoff Alerts. |
 
 ---
 
